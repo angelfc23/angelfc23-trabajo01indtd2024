@@ -19,7 +19,7 @@
 
 source("teoriadecision_funciones_incertidumbre.R")
 
-tabla_4 = crea.tablaX(c(15, 25, 35,  
+tabla1 = crea.tablaX(c(15, 25, 35,  
                         10, 30, 50,  
                         20, 28, 30,  
                         18, 22, 27) , numalternativas = 4, numestados = 3)
@@ -31,27 +31,27 @@ tabla_4
 
 ##### Hurwicz ------------------------------------------------------------------
 
-solucion(criterio.Hurwicz(tabla_4))
+solucion(criterio.Hurwicz(tabla1))
 
 ##### Hurwicz General ----------------------------------------------------------
 
-solucion(criterio.Hurwicz.General(tabla_4))
+solucion(criterio.Hurwicz.General(tabla1))
 
 ##### Laplace ------------------------------------------------------------------
 
-solucion(criterio.Laplace(tabla_4))
+solucion(criterio.Laplace(tabla1))
 
 ##### Optimista ----------------------------------------------------------------
 
-solucion(criterio.Optimista(tabla_4))
+solucion(criterio.Optimista(tabla1))
 
 ##### PuntoIdeal ---------------------------------------------------------------
 
-solucion(criterio.PuntoIdeal(tabla_4))
+solucion(criterio.PuntoIdeal(tabla1))
 
 ##### Savage -------------------------------------------------------------------
 
-solucion(criterio.Savage(tabla_4))
+solucion(criterio.Savage(tabla1))
 
 
 #### Desfavorables -------------------------------------------------------------
@@ -59,27 +59,27 @@ solucion(criterio.Savage(tabla_4))
 
 ##### Hurwicz ------------------------------------------------------------------
 
-solucion(criterio.Hurwicz(tabla_4, favorable = F))
+solucion(criterio.Hurwicz(tabla1, favorable = F))
 
 ##### Hurwicz General ----------------------------------------------------------
 
-solucion(criterio.Hurwicz.General(tabla_4, favorable = F))
+solucion(criterio.Hurwicz.General(tabla1, favorable = F))
 
 ##### Laplace ------------------------------------------------------------------
 
-solucion(criterio.Laplace(tabla_4, favorable = F))
+solucion(criterio.Laplace(tabla1, favorable = F))
 
 ##### Optimista ----------------------------------------------------------------
 
-solucion(criterio.Optimista(tabla_4, favorable = F))
+solucion(criterio.Optimista(tabla1, favorable = F))
 
 ##### PuntoIdeal ---------------------------------------------------------------
 
-solucion(criterio.PuntoIdeal(tabla_4, favorable = F))
+solucion(criterio.PuntoIdeal(tabla1, favorable = F))
 
 ##### Savage -------------------------------------------------------------------
 
-solucion(criterio.Savage(tabla_4, favorable = F))
+solucion(criterio.Savage(tabla1, favorable = F))
 
 
 
@@ -104,14 +104,14 @@ solucion(criterio.Savage(tabla_4, favorable = F))
 
 # Primero, creamos la matriz del problema.
 
-tabla_8 = crea.tablaX(c(2, 6, 10, 12,  
+tabla2 = crea.tablaX(c(2, 6, 10, 12,  
                        4, 8, 6, 8,     
                        -1, 5, 15, 20) , numalternativas = 3, numestados = 4)
-tabla_8
+tabla2
 
 # Resolvemos mediante todos los métodos a la vez.
 
-criterio.Todos(tabla_8, favorable = T)
+criterio.Todos(tabla2, favorable = T)
 
 # Solución:
 
