@@ -1,0 +1,52 @@
+---
+title: "ENUNCIADOS"
+author: "Ángel Florido Cáceres"
+date: "2024-10-12"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+
+## PROBLEMA TABLA DE DECISIÓN
+
+Se tiene la siguiente matriz de decisión:
+```{=latex}
+\begin{array}{c|ccc}
+
+ & \text{e1} & \text{e2} & \text{e3} \\
+\hline
+\text{d1} &  15  & 25  &  35 \\
+\text{d2} &  10  & 35  &  50 \\
+\text{d3} &  20  & 28  &  30 \\
+\text{d4} &  18  & 22  &  27 \\
+
+\end{array}
+```
+Aplicar los  distintos métodos de decisión bajo 
+incertidumbre para resolver el problema, tanto para el caso favorable (beneficios) como para 
+el caso desfavorable (costos).
+
+
+<br>
+<br>
+
+## PROBLEMA SITUACIÓN REAL
+Supongamos que una empresa debe decidir en cuál de tres proyectos (P1, P2, P3) invertir, pero las condiciones futuras del mercado son inciertas. Existen cuatro posibles escenarios económicos: Recesión, Estabilidad, Crecimiento moderado y Crecimiento elevado. Los beneficios estimados para cada proyecto, dependiendo del escenario económico, están dados en millones de dólares en la siguiente tabla:
+
+```{=latex}
+\begin{array}{c|ccccc}
+
+ & \text{Recesión} & \text{Estabilidad} & \text{Crecimiento moderado} & \text{Crecimiento elevado} \\
+\hline
+\text{d1} &  2  &  6  &  10  &  12 \\
+\text{d2} &  4  &  8  &  6  &  8 \\
+\text{d3} &  -1  &  5  &  15  &  20  \\
+
+\end{array}
+```
+
+Recomienda a la empresa qué decisión tomar una utilizando varios métodos bajo incertidumbre para analizar la mejor alternativa en función de los posibles escenarios.
