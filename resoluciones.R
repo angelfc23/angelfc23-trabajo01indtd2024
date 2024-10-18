@@ -19,11 +19,42 @@
 
 source("teoriadecision_funciones_incertidumbre.R")
 
+## Hacemos la función que escribe la solución dependiendo del método, el criterio,
+## el número de alternativas óptimas y, obviamente, la alternativa óptima.
+
+solucion <- function (x) {
+  
+  # Creamos las variables que se irán necesitando.
+  crit_sol = x$criterio
+  met_sol = x$metodo
+  opt_sol = x$AlternativaOptima
+  n_sol = length(opt_sol)
+  
+  # Hacemos la primera parte de la frase de la solución (método y criterio).
+  cat("En situación", met_sol, "y mediante el criterio de", crit_sol, 
+      if (n_sol == 1) {
+        "la solución es "
+      } else {
+        "las soluciones son "
+      })
+  
+  # Hacemos la parte final de la frase de la solución (alternativas óptimas).
+  if(n_sol == 1){
+    cat(opt_sol, ".")
+  }
+  else {
+    for(i in 1:(n_sol-1)) {
+      cat(opt_sol[i], "y ")
+    }
+    cat(opt_sol[n_sol], ".")
+  }
+}
+
 tabla1 = crea.tablaX(c(15, 25, 35,  
                         10, 30, 50,  
                         20, 28, 30,  
                         18, 22, 27) , numalternativas = 4, numestados = 3)
-tabla_4
+tabla1
 
 ## Utilizaremos la función solución creada para el problema 1
 
